@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.opencooffeecamera">
+
+    <!-- Permission to access the camera -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- Permission to access flash light -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <!-- Feature of use of the camera -->
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+
+    <!-- Feature of using the auto focus of the camera -->
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+
+    <!-- Feature of the use of the front camera -->
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+
+    <!-- Feature of the use of flash light -->
+    <uses-feature android:name="android.permission.FLASHLIGHT" android:required="false"/>
+
+    <!-- Permissions to read to external storage memory -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- Permissions to write to external storage memory -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".application.OpenCooffeeCameraApplication"
+        android:label="@string/app_name"
+        android:persistent="false"
+        android:enabled="true"
+        android:hasCode="true"
+        android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:roundIcon="@drawable/ic_launcher"
+        android:killAfterRestore="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:resizeableActivity="true"
+        android:theme="@style/AppBaseTheme">
+
+        <!-- CooffeeCamera -->
+        <activity
+            android:name="com.opencooffeecamera.CooffeeCamera"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/OpenCooffeeCameraStyle">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <!-- CooffeeCameraResult -->
+        <activity
+            android:name="com.opencooffeecamera.CooffeeCameraResult"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/AppBaseTheme">
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.opencooffeecamera.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+
+        </provider>
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Camera</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="agree">De acuerdo</string>
+    <string name="camera_runtime_permission_text">Camera quiere acceder a la cámara.\n\nSigue el siguiente procedimiento:\n\nPermisos &#45;&#62; Cámara</string>
+    <string name="storage_runtime_permission_text">Camera quiere acceder al almacenamiento del dispositivo.\n\nSigue el siguiente procedimiento:\n\nPermisos &#45;&#62; Almacenamiento</string>
+    <string name="processing_file">Procesando fichero</string>
+    <string name="an_error_has_ocurred">Ha ocurrido un error</string>
+    <string name="saved_photo">La foto se ha guardado satisfactóriamente</string>
+    <string name="error_saving_photo">Ha ocurrido un error intentando guardar el archivo</string>
+    <string name="photo_already_saved">La foto ya ha sido guardada</string>
+</resources>

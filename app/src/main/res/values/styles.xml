@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!--
+        Base application theme for API 21+. 
+        This theme completely replaces AppBaseTheme from res/values/styles.xml on API 21+ devices.
+    -->
+        
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+        <item name="windowActionBar">false</item>  
+              
+        <item name="windowNoTitle">true</item>
+        
+        <item name="android:windowAnimationStyle">@null</item>
+                
+        <!-- Drawable placed over the window content foreground. 
+     	     By default, this is a shadow below the status bar.
+     	     Set to any resource to use in place of the default status bar shadow, or null (@null in XML) to remove it. -->
+    	<item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:colorPrimaryDark">@color/transparent</item>
+
+    </style>
+    
+    <!-- CooffeeCamera -->
+    
+    <style name="OpenCooffeeCameraStyle" parent="AppBaseTheme">
+
+        <item name="android:windowBackground">
+            @drawable/launch_screen
+        </item> 
+        
+    </style>
+
+    <!-- Progress dialog style -->
+    <style name="OpenCooffeeCameraProgressDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/white</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+</resources>
