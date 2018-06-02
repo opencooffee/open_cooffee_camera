@@ -55,13 +55,6 @@ public class Utils {
         return System.currentTimeMillis();
     }
 
-    /**
-     * Get the width of the device screen.
-     *
-     * @param context
-     *
-     * @return device screen width as int
-     */
     public static int getDeviceScreeWidth(Context context) {
 
         WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -86,13 +79,6 @@ public class Utils {
         return 0;
     }
 
-    /**
-     * Get the height of the device screen.
-     *
-     * @param context
-     *
-     * @return device screen height as int
-     */
     public static int getDeviceScreenHeight(Context context) {
 
         WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -232,15 +218,6 @@ public class Utils {
         return Base64.encodeToString(uuidByteArray, Base64.NO_WRAP | Base64.URL_SAFE);
     }
 
-    /**
-     * Copy a file.
-     *
-     * @param srcFile
-     *
-     * @param dstFile
-     *
-     * @return Boolean value
-     */
     public static boolean copyFile(File srcFile, File dstFile) {
 
         boolean isFileCopied = false;

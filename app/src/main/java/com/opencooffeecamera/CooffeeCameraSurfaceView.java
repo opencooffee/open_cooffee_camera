@@ -23,20 +23,16 @@ public class CooffeeCameraSurfaceView extends SurfaceView {
     private long pressStartTime;
     private float pressedX, pressedY;
 
-    // Constructor.
     public CooffeeCameraSurfaceView(Context context) {
         super(context);
     }
 
-    // Constructor.
     public CooffeeCameraSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        // Create a new gesture detector.
         gestureDetector = new GestureDetector(context, new GestureListener());
     }
 
-    // Constructor.
     public CooffeeCameraSurfaceView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }

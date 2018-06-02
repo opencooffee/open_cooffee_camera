@@ -10,7 +10,6 @@ public class ExternalStorage {
 
     private static File externalStoragePublicDir;
 
-    // Constructor.
     public ExternalStorage(String albumName) {
 
         if (ExternalStorage.isExternalStorageAvailable() && !ExternalStorage.isExternalStorageReadOnly()) {
@@ -18,18 +17,19 @@ public class ExternalStorage {
             externalStoragePublicDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), albumName);
 
             if (!externalStoragePublicDir.exists()) {
+        
                 externalStoragePublicDir.mkdirs();
+
+                if (!externalStoragePublicDir.exists()) {
+                    externalStoragePublicDir.mkdirs();
+                }
+
             }
 
         }
 
     }
 
-    /**
-     * Check if external storage is in read-only mode.
-     *
-     * @return Boolean value
-     */
     private static boolean isExternalStorageReadOnly() {
 
         String extStorageState = Environment.getExternalStorageState();
@@ -37,11 +37,6 @@ public class ExternalStorage {
         return Environment.MEDIA_MOUNTED_READ_ONLY.equals(extStorageState);
     }
 
-    /**
-     * Check if external storage is available.
-     *
-     * @return Booleano value
-     */
     private static boolean isExternalStorageAvailable() {
 
         String extStorageState = Environment.getExternalStorageState();
@@ -49,13 +44,6 @@ public class ExternalStorage {
         return Environment.MEDIA_MOUNTED.equals(extStorageState);
     }
 
-    /**
-     * Get public album file.
-     *
-     * @param fileName
-     *
-     * @return file
-     */
     public File getPublicAlbumFile(String fileName) {
 
         try {

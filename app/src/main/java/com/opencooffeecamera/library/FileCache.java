@@ -16,7 +16,13 @@ public class FileCache {
         cacheDir = context.getCacheDir();
     		    		
     	if (cacheDir != null && !cacheDir.exists()) {
+
             cacheDir.mkdirs();
+
+            if (!cacheDir.exists()) {
+                cacheDir.mkdirs();
+            }
+
         }
 
     }

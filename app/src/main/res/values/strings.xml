@@ -6,9 +6,9 @@
     <string name="agree">Agree</string>
     <string name="camera_runtime_permission_text">Camera wants access to the camera.\n\nFollow the following procedure:\n\nPermissions &#45;&#62; Camera</string>
     <string name="storage_runtime_permission_text">Camera wants to access storage device.\n\nFollow the following procedure:\n\nPermissions &#45;&#62; Storage</string>
-    <string name="processing_file">Processing file</string>
+    <string name="processing_image">Processing image</string>
     <string name="an_error_has_ocurred">An error has ocurred</string>
-    <string name="saved_photo">The photo has been saved successfully</string>
-    <string name="error_saving_photo">An error occurred while trying to save the file</string>
-    <string name="photo_already_saved">The photo has already been saved</string>
+    <string name="saved_image">The image has been saved successfully</string>
+    <string name="error_saving_image">An error occurred while trying to save the file</string>
+    <string name="image_already_saved">The image has already been saved</string>
 </resources>

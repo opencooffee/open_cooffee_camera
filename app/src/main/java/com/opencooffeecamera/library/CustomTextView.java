@@ -12,14 +12,12 @@ public class CustomTextView extends AppCompatTextView {
 
 	//private static final String LOG_TAG = CustomTextView.class.getSimpleName();
 
-	// Constructor.
 	public CustomTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 	
 		setCustomFont(attrs);
 	}
 
-	// Contructor.
 	public CustomTextView(Context context, AttributeSet attrs) {
 	    super(context, attrs);
 	    

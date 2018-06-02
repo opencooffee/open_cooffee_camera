@@ -22,13 +22,6 @@ public class RuntimePermissionUtils {
 	public static final int REQUEST_CAMERA_PERMISSION = 0;
 	public static final int REQUEST_WRITE_EXTERNAL_STORAGE_PERMISSION = 1;
 				
-	/**
-	 * Show a message.
-     *
-	 * @param appCompatActivity
-	 * @param message
-	 * @param listener
-	 */
 	public static void showMessage(AppCompatActivity appCompatActivity, String message, DialogInterface.OnClickListener listener) {
         
 		new AlertDialog.Builder(appCompatActivity)
@@ -40,11 +33,6 @@ public class RuntimePermissionUtils {
                 .show();
     }
 	
-	/**
-	 * Go to settings.
-     *
-	 * @param appCompatActivity
-	 */
 	public static void goToSettings(AppCompatActivity appCompatActivity) {
 	    
 		Intent intent = new Intent();

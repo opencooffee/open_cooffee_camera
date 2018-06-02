@@ -10,7 +10,7 @@ public class SharedPreferencesManager {
 	private static final String IS_CAMERA_FRONT_CAMERA = "is_camera_front_camera";
 	private static final String DEVICE_SCREEN_WIDTH = "device_screen_width";
 	private static final String DEVICE_SCREEN_HEIGHT = "device_screen_height";
-    private static final String DEVICE_MODEL = "deviceModel";
+    private static final String DEVICE_MODEL = "device_model";
 
 	private ObscuredSharedPreferences obscuredSharedPreferences;
 	

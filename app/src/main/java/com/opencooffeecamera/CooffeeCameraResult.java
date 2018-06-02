@@ -117,7 +117,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
             isGoToSettingsForWriteExternalStoragePermission = false;
 
             if (checkSelfPermission(RuntimePermissionUtils.PERMISSION_WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                savePhotoInDeviceMemory();
+                saveImageInDeviceMemory();
             }
 
         }
@@ -153,7 +153,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
             case RuntimePermissionUtils.REQUEST_WRITE_EXTERNAL_STORAGE_PERMISSION:
 
                 if (Build.VERSION.SDK_INT >= 23 && checkSelfPermission(RuntimePermissionUtils.PERMISSION_WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                    savePhotoInDeviceMemory();
+                    saveImageInDeviceMemory();
                 } else {
 
                     if (!ActivityCompat.shouldShowRequestPermissionRationale(CooffeeCameraResult.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
@@ -243,9 +243,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
             }
 
             @Override
-            public void onShowPress(MotionEvent motionEvent) {
-                // Empty.
-            }
+            public void onShowPress(MotionEvent motionEvent) {}
 
             @Override
             public boolean onSingleTapUp(MotionEvent motionEvent) {
@@ -258,9 +256,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
             }
 
             @Override
-            public void onLongPress(MotionEvent motionEvent) {
-                // Empty.
-            }
+            public void onLongPress(MotionEvent motionEvent) {}
 
             @Override
             public boolean onFling(MotionEvent motionEvent1, MotionEvent motionEvent2, float velocityX, float velocityY) {
@@ -268,8 +264,6 @@ public class CooffeeCameraResult extends AppCompatActivity {
             }
 
         });
-
-        // Back event listener.
 
         backImageButton.setOnTouchListener(new View.OnTouchListener() {
 
@@ -280,7 +274,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
 
-                    // Construir un Rect de los límites de la vista.
+                    // Build a Rect of the limits of view.
                     rect = new Rect(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
 
                     if (previousTouchedImageButton.size() == 0) {
@@ -355,8 +349,6 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
         });
 
-        // Cancel event listener.
-
         cancelImageButton.setOnTouchListener(new View.OnTouchListener() {
 
             ArrayList<ImageButton> previousTouchedImageButton = new ArrayList<>();
@@ -366,7 +358,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
 
-                    // Construir un Rect de los límites de la vista.
+                    // Build a Rect of the limits of view.
                     rect = new Rect(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
 
                     if (previousTouchedImageButton.size() == 0) {
@@ -446,8 +438,6 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
         });
 
-        // Save event listener.
-
         saveImageButton.setOnTouchListener(new View.OnTouchListener() {
 
             ArrayList<ImageButton> previousTouchedImageButton = new ArrayList<>();
@@ -457,7 +447,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
 
-                    // Construir un Rect de los límites de la vista.
+                    // Build a Rect of the limits of view.
                     rect = new Rect(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
 
                     if (previousTouchedImageButton.size() == 0) {
@@ -523,11 +513,11 @@ public class CooffeeCameraResult extends AppCompatActivity {
                                     );
 
                                 } else {
-                                    savePhotoInDeviceMemory();
+                                    saveImageInDeviceMemory();
                                 }
 
                             } else {
-                                savePhotoInDeviceMemory();
+                                saveImageInDeviceMemory();
                             }
 
                         }
@@ -551,8 +541,6 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
         });
 
-        // Share event listener.
-
         shareImageButton.setOnTouchListener(new View.OnTouchListener() {
 
             ArrayList<ImageButton> previousTouchedImageButton = new ArrayList<>();
@@ -562,7 +550,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
 
-                    // Construir un Rect de los límites de la vista.
+                    // Build a Rect of the limits of view.
                     rect = new Rect(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
 
                     if (previousTouchedImageButton.size() == 0) {
@@ -670,9 +658,6 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
     }
 
-    /**
-     * Decrease the size of backImageButton.
-     */
     private void decreaseBackImageButton() {
 
         int backImageButtonLayoutWidthDp = 40;
@@ -693,9 +678,6 @@ public class CooffeeCameraResult extends AppCompatActivity {
         backImageButton.setLayoutParams(params);
     }
 
-    /**
-     * Decrease the size of cancelImageButton.
-     */
     private void decreaseCancelImageButton() {
 
         int cancelImageButtonLayoutWidthDp = 40;
@@ -716,9 +698,6 @@ public class CooffeeCameraResult extends AppCompatActivity {
         cancelImageButton.setLayoutParams(params);
     }
 
-    /**
-     * Decrease the size of saveImageButton.
-     */
     private void decreaseSaveImageButton() {
 
         int saveImageButtonLayoutWidthDp = 40;
@@ -739,9 +718,6 @@ public class CooffeeCameraResult extends AppCompatActivity {
         saveImageButton.setLayoutParams(params);
     }
 
-    /**
-     * Decrease the size of shareImageButton.
-     */
     private void decreaseShareImageButton() {
 
         int shareImageButtonLayoutWidthDp = 40;
@@ -790,7 +766,7 @@ public class CooffeeCameraResult extends AppCompatActivity {
      * Save the file with that name.
      * Show the result message.
      */
-    private void savePhotoInDeviceMemory() {
+    private void saveImageInDeviceMemory() {
 
         if (!isMediaFileAlreadySaved) {
 
@@ -806,14 +782,14 @@ public class CooffeeCameraResult extends AppCompatActivity {
 
                 isMediaFileAlreadySaved = true;
 
-                toastTextView.setText(getResources().getString(R.string.saved_photo));
+                toastTextView.setText(getResources().getString(R.string.saved_image));
 
             } else {
-                toastTextView.setText(getResources().getString(R.string.error_saving_photo));
+                toastTextView.setText(getResources().getString(R.string.error_saving_image));
             }
 
         } else {
-            toastTextView.setText(getResources().getString(R.string.photo_already_saved));
+            toastTextView.setText(getResources().getString(R.string.image_already_saved));
         }
 
         messageToast.show();

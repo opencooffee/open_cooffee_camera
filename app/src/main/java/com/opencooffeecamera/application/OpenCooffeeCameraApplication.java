@@ -148,11 +148,6 @@ public class OpenCooffeeCameraApplication extends Application {
         sharedPreferencesManager.createDeviceModel(deviceModel);
     }
 
-    /**
-     * Get default regular font.
-     *
-     * @return Typeface regularFont
-     */
     public static Typeface getRegularFont() {
 
         if (regularFont == null) {
@@ -162,11 +157,6 @@ public class OpenCooffeeCameraApplication extends Application {
         return regularFont;
     }
 
-    /**
-     * Get default bold font.
-     *
-     * @return Typeface boldFont
-     */
     public static Typeface getBoldFont() {
 
         if (boldFont == null) {

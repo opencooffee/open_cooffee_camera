@@ -223,9 +223,7 @@ public class CooffeeCamera extends AppCompatActivity implements SurfaceHolder.Ca
 
         }
 
-        if (resultCode == RESULT_CANCELED) {
-            // Empty.
-        }
+        if (resultCode == RESULT_CANCELED) {}
 
     }
 
@@ -314,12 +312,7 @@ public class CooffeeCamera extends AppCompatActivity implements SurfaceHolder.Ca
         messageToast.setView(toastLayout);
     }
 
-    /**
-     * Start listening to events.
-     */
     private void initCallbacks() {
-
-        // changeFlashModeImageButton event listener.
 
         // Touch to change the flash mode (on / off).
         changeFlashModeImageButton.setOnTouchListener(new OnTouchListener() {
@@ -1473,7 +1466,7 @@ public class CooffeeCamera extends AppCompatActivity implements SurfaceHolder.Ca
 
             progressDialog = new ProgressDialog(appCompatActivity, R.style.OpenCooffeeCameraProgressDialogStyle);
 
-            progressDialog.setMessage(getResources().getString(R.string.processing_file));
+            progressDialog.setMessage(getResources().getString(R.string.processing_image));
             progressDialog.setIndeterminate(false);
             progressDialog.setCancelable(false);
             progressDialog.setCanceledOnTouchOutside(false);

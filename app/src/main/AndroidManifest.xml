@@ -43,7 +43,6 @@
         android:resizeableActivity="true"
         android:theme="@style/AppBaseTheme">
 
-        <!-- CooffeeCamera -->
         <activity
             android:name="com.opencooffeecamera.CooffeeCamera"
             android:screenOrientation="portrait"
@@ -57,7 +56,6 @@
 
         </activity>
 
-        <!-- CooffeeCameraResult -->
         <activity
             android:name="com.opencooffeecamera.CooffeeCameraResult"
             android:screenOrientation="portrait"
